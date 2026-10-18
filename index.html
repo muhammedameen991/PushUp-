@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>PushUp — Small reps. Big progress.</title>
+    <meta name="description" content="PushUp — Small reps. Big progress. Web app with real-time camera pose tracking, manual counter, 3D biomechanics visualizer, and local progress tracking." />
+    <meta name="author" content="Ameen (https://iamameen.vercel.app/)" />
+    
+    <!-- Open Graph & Social -->
+    <meta property="og:title" content="PushUp — Small reps. Big progress." />
+    <meta property="og:description" content="PushUp — Small reps. Big progress. Web app with real-time camera pose tracking, manual counter, 3D biomechanics visualizer, and local progress tracking." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PushUp — Small reps. Big progress." />
+    <meta name="twitter:description" content="PushUp — Small reps. Big progress. Web app with real-time camera pose tracking, manual counter, 3D biomechanics visualizer, and local progress tracking." />
+    <meta name="twitter:image" content="/pwa-512x512.png" />
+
+    <!-- PWA & Mobile Web App Meta -->
+    <meta name="theme-color" content="#F5F4EF" id="theme-color-meta" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="PushUp" />
+
+    <!-- Icons & Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
+    <!-- Google Fonts for modern clean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Client-side TensorFlow.js and MoveNet SinglePose Lightning runtime -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@2.1.3/dist/pose-detection.min.js"></script>
+  </head>
+  <body class="bg-[#F5F4EF] text-[#262624] antialiased selection:bg-[#C5684D]/20 selection:text-[#C5684D]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker for offline support
+      if ('serviceWorker' in navigator && !window.location.hostname.includes('localhost.disabled')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.log('SW registration note:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

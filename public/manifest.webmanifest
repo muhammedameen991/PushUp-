@@ -1,0 +1,33 @@
+{
+  "id": "/",
+  "name": "PushUp",
+  "short_name": "PushUp",
+  "description": "Small reps. Big progress. Push-Up Counter PWA with camera pose detection, manual counter, 3D biomechanics, and progress tracking.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F5F4EF",
+  "theme_color": "#C5684D",
+  "categories": ["fitness", "health", "sports", "productivity"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "PushUp",
+  "description": "PushUp — Small reps. Big progress. Client-side computer vision pose detection, tactile manual rep counter, 3D biomechanics visualizer, and local progress tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

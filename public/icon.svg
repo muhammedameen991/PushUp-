@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9775C" />
+      <stop offset="100%" stop-color="#B8593F" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <!-- Background with Warm Terracotta -->
+  <rect width="512" height="512" rx="128" fill="url(#terracottaGrad)" />
+  
+  <!-- Subtle circular accent ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="4" stroke-dasharray="8 8" />
+  
+  <!-- Stylized PushUp Figure & Floor Line -->
+  <!-- Ground Floor -->
+  <line x1="80" y1="370" x2="432" y2="370" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Hands on ground -->
+  <circle cx="150" cy="358" r="14" fill="#FFFFFF" />
+  
+  <!-- Feet on ground -->
+  <circle cx="390" cy="358" r="14" fill="#FFFFFF" />
+  
+  <!-- Athletic Push-Up Plank Body Silhouette in #FFFFFF -->
+  <!-- Head -->
+  <circle cx="115" cy="235" r="26" fill="#FFFFFF" filter="url(#shadow)" />
+  
+  <!-- Torso & Legs line / plank -->
+  <path d="M 140 260 L 260 295 L 390 355" fill="none" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Arms in 90-degree push-up position -->
+  <path d="M 160 265 L 185 315 L 150 355" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Dynamic upward rep arrow -->
+  <path d="M 215 190 L 256 145 L 297 190" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="256" y1="150" x2="256" y2="230" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" />
+</svg>
